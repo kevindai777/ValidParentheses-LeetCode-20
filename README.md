@@ -5,4 +5,4 @@ Leetcode Question 20 (Easy)
 Techniques Used in Question:
 Stack
 
-https://leetcode.com/problems/valid-parentheses/
+[Link to question](https://leetcode.com/problems/valid-parentheses/)
