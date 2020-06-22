@@ -21,8 +21,8 @@ for (let i = 0; i < parentheses.length; i++) {
     //If it's a closing bracket, check if the top of the stack has the corresponding opening bracket
     if (map[parentheses.charAt(i)]) {
         //Pop the opening bracket out to check it w/ the hashmap
-        //If it doesn't correspond, then it's not valid
         let topElement = stack.length > 0 ? stack.pop() : '#'
+        //If it doesn't correspond, then it's not valid
         if (map[parentheses.charAt(i)] !== topElement) {
             return false
         }
@@ -34,6 +34,6 @@ for (let i = 0; i < parentheses.length; i++) {
 
 
 //If the stack still has elements by the end of the counter, 
-//That means that some elements haven't been accounted for
+//that means that some elements haven't been accounted for
 //Therefore, it's not valid
 return stack.length === 0
