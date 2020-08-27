@@ -5,7 +5,8 @@
 let parentheses = '()'
 
 
-//O(n) solution using a stack
+//O(n) solution where n is the length of the given string
+//We use a stack to keep track of 'inner' and 'outer' parentheses
 
 //Map out all closing and opening brackets
 let map = {
@@ -18,6 +19,7 @@ let stack = []
 
 //Check each element...
 for (let i = 0; i < parentheses.length; i++) {
+    
     //If it's a closing bracket, check if the top of the stack has the corresponding opening bracket
     if (map[parentheses.charAt(i)]) {
         //Pop the opening bracket out to check it w/ the hashmap
@@ -26,12 +28,12 @@ for (let i = 0; i < parentheses.length; i++) {
         if (map[parentheses.charAt(i)] !== topElement) {
             return false
         }
+        
     //Otherwise, if the element is an opening bracket, push it in
     } else {
         stack.push(parentheses.charAt(i))
     }
 }
-
 
 //If the stack still has elements by the end of the counter, 
 //that means that some elements haven't been accounted for
