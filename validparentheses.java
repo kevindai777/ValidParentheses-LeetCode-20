@@ -1,4 +1,4 @@
-//Java solution
+//Java Solution
 
 class Solution {
     
